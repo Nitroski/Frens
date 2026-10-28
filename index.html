@@ -1,17 +1,4 @@
-<body>
-  <div id="root"></div>
-  <script>
-    addEventListener("error", function (e) {
-      var t = (e.target && (e.target.src || e.target.href)) || "";
-      document.body.insertAdjacentHTML(
-        "beforeend",
-        '<pre style="color:#ff6b6b;white-space:pre-wrap;padding:12px">' +
-          (e.message || "failed to load") + " " + t + "</pre>"
-      );
-    }, true);
-  </script>
-  <script type="module" src="/main.tsx"></script>
-</body><!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
