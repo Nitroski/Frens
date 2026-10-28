@@ -76,10 +76,7 @@ export default function App() {
 
   useEffect(() => {
     if (viewer) return;
-    try {
-      localStorage.setItem(STORE_KEY, JSON.stringify(cfg));
-    } catch {}
-  }, [cfg, viewer]);
+
 
   const set = <K extends keyof Config>(k: K, v: Config[K]) => setCfg((c) => ({ ...c, [k]: v }));
 
@@ -125,38 +122,6 @@ export default function App() {
         </>
       )}
 
-      {editing && !viewer && (
-        <aside className="panel">
-          <h2>Edit page</h2>
-
-          <label>Question text</label>
-          <input value={cfg.question} onChange={(e) => set("question", e.target.value)} />
-
-          <label>Question gif link</label>
-          <input placeholder="https://…/something.gif" value={cfg.questionGif} onChange={(e) => set("questionGif", e.target.value)} />
-
-          <label>Yes button text</label>
-          <input value={cfg.yesLabel} onChange={(e) => set("yesLabel", e.target.value)} />
-
-          <label>No button text</label>
-          <input value={cfg.noLabel} onChange={(e) => set("noLabel", e.target.value)} />
-
-          <label>No button messages (one per line, shown in order)</label>
-          <textarea rows={6} value={cfg.noMessages.join("\n")} onChange={(e) => set("noMessages", e.target.value.split("\n"))} />
-
-          <label>Text after clicking Yes</label>
-          <input value={cfg.yesText} onChange={(e) => set("yesText", e.target.value)} />
-
-          <label>“Yes” gif link</label>
-          <input placeholder="https://…/something.gif" value={cfg.yesGif} onChange={(e) => set("yesGif", e.target.value)} />
-
-          <div className="row">
-            <button className="btn small" onClick={copyLink}>Copy share link</button>
-            <button className="btn small ghost" onClick={() => { setAccepted(false); setNoCount(0); }}>Reset preview</button>
-            <button className="btn small ghost" onClick={() => setCfg(DEFAULTS)}>Defaults</button>
-          </div>
-        </aside>
-      )}
     </main>
   );
 }
