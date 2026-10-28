@@ -10,10 +10,10 @@ type Config = {
   yesGif: string;
 };
 
-// ✏️ Default text. Paste gif links in the ✎ Edit panel, or put them here.
+// Default text. Paste gif links in the Edit panel, or put them here.
 const DEFAULTS: Config = {
   question: "Can We Both be Friends 👉👈?",
-  questionGif: "",
+  questionGif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGdmemdzdWZxNDI1ODdoc3JuanNibHE3ZGwxeTQyMmJmemRnNDRtNCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/11nPtD8gHrkMr6/giphy.gif",
   yesLabel: "Yesss 😊",
   noLabel: "No",
   noMessages: [
@@ -21,10 +21,10 @@ const DEFAULTS: Config = {
     "Really sure? 😢",
     "Please, I beg you 🥹",
     "I'm gonna start crying now 😭",
-    "I hate you 😡",
+    "Okieee np😭😭😭😭",
   ],
   yesText: "Yesssssss 🫂 !!!!!!",
-  yesGif: "",
+  yesGif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZm1manRqYTE2amdzc294OThqNm9ubm00eHg2Nm9vbWMxbWttcml4ZyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Cb0N0cFiCqqggGaLhX/giphy.gif",
 };
 
 const STORE_KEY = "friends-page-config";
