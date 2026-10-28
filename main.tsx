@@ -1,7 +1,5 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+   import { createRoot } from "react-dom/client";
+   import App from "./App";
+   import "./styles.css";
 
-export default defineConfig({
-  plugins: [react()],
-  base: "/Frens/",
-});
+   createRoot(document.getElementById("root")!).render(<App />);
