@@ -10,7 +10,7 @@ type Config = {
   yesGif: string;
 };
 
-// Default text and GIFs
+
 const DEFAULTS: Config = {
   question: "Can We Both be Friends 👉👈?",
   questionGif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGdmemdzdWZxNDI1ODdoc3JuanNibHE3ZGwxeTQyMmJmemRnNDRtNCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/11nPtD8gHrkMr6/giphy.gif",
@@ -27,7 +27,7 @@ const DEFAULTS: Config = {
   yesGif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZm1manRqYTE2amdzc294OThqNm9ubm00eHg2Nm9vbWMxbWttcml4ZyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Cb0N0cFiCqqggGaLhX/giphy.gif",
 };
 
-// Only allow normal links / relative paths for images
+
 const safeSrc = (u: string) => (/^(https?:\/\/|\.{0,2}\/)/i.test(u.trim()) ? u.trim() : "");
 
 function Gif({ src, hint }: { src: string; hint?: string }) {
